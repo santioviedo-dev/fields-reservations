@@ -14,4 +14,4 @@ que utilice, la base de datos se encuentra en la carpeta "resources"
 3 - Abra el archivo config.php desde su editor de código y configure los datos de la conexión a la base de datos.
 
 4 - Usuario predefinido para inicio de sesión: admin
-    Clave: 44621312
+    Clave: 12345678
