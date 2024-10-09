@@ -18,6 +18,9 @@ class Reservations
             $query .= " WHERE customer_id IN 
             (SELECT customer_id FROM customers WHERE customer_name LIKE :filterInfo OR customer_tel LIKE :filterInfo)";
         }
+
+        $query.= " ORDER BY reservation_for_date DESC";
+
         $stmt = $conn->prepare($query);
         if ($filterDate && $filterInfo) {
             $stmt->bindParam(':filterDate', $filterDate);

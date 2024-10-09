@@ -47,4 +47,32 @@
     window.onload = function() {
         document.getElementById("searchButton").dispatchEvent(new Event("click"));
     };
+
+    document.getElementById('filterInfo').addEventListener("keydown", function() {
+        
+    });
+
+    function deleteField(fieldId) {
+        if (confirm("¿Estás seguro de que quieres eliminar este registro?")) {
+            fetch("app/controllers/deleteField.php", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: `id=${fieldId}`,
+                })
+                .then((response) => response.text())
+                .then((result) => {
+                    if (result === "success") {
+                        document.getElementById(`row-${fieldId}`).remove();
+                    } else {
+                        alert("Error al eliminar el registro. Probablemente esté relacionado con algún registro de reservas.");
+                    }
+                })
+                .catch((error) => {
+                    alert("Error en la solicitud Fetch");
+                    console.error("Error:", error);
+                });
+        }
+    }
 </script>
