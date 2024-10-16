@@ -1,4 +1,3 @@
-
 <div class="container" style="margin-top: 50px; display: grid; place-content:center;">
     <div class="columns">
         <div class="column">
@@ -20,22 +19,23 @@
             </div>
         </div>
     </div>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <td>Fecha</td>
-                <td>Cliente</td>
-                <td>Hora</td>
-                <td>Duración</td>
-                <td>Cancha</td>
-                <td>Pagado</td>
-                <td colspan="2"></td>
-            </tr>
-        </thead>
-        <tbody id="reservationsTableBody">
-        </tbody>
-    </table>
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Fecha</td>
+                    <td>Cliente</td>
+                    <td>Hora</td>
+                    <td>Duración</td>
+                    <td>Cancha</td>
+                    <td>Pagado</td>
+                    <td colspan="2"></td>
+                </tr>
+            </thead>
+            <tbody id="reservationsTableBody">
+            </tbody>
+        </table>
+    </div>
 </div>
 <script>
     document.getElementById("filterDate").addEventListener("change", function(event) {

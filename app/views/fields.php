@@ -1,4 +1,3 @@
-
 <div class="container" style="margin-top: 50px; display: grid; place-content:center;">
     <div class="columns">
         <div class="column">
@@ -15,18 +14,19 @@
             </div>
         </div>
     </div>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <td>Id - Número</td>
-                <td>Tipo</td>
-                <td colspan="2"></td>
-            </tr>
-        </thead>
-        <tbody id="fieldsTableBody">
-        </tbody>
-    </table>
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Id - Número</td>
+                    <td>Tipo</td>
+                    <td colspan="2"></td>
+                </tr>
+            </thead>
+            <tbody id="fieldsTableBody">
+            </tbody>
+        </table>
+    </div>
 </div>
 <script>
     document.getElementById("searchButton").addEventListener("click", function(event) {
@@ -49,7 +49,7 @@
     };
 
     document.getElementById('filterInfo').addEventListener("keydown", function() {
-        
+
     });
 
     function deleteField(fieldId) {
